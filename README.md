@@ -1,1 +1,1 @@
-# youtube-player-and-downloader
+# YouTube Player + Downloader (using Python and PySimpleGUI)
