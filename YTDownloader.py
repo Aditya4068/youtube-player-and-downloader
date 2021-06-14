@@ -55,6 +55,7 @@ DARK_GRAY_BUTTON_COLOR = '#e0e0e0 on #212021'
 # flags for error handling
 flag=1 
 flag2=0
+animflag=0
 
 titlelist=[] # list to store playlist
 
@@ -176,10 +177,11 @@ if __name__ == '__main__':
             
             while not done:
                 flag=0
-                
                 window['-IMAGE-'].update_animation(sg.DEFAULT_BASE64_LOADING_GIF,  time_between_frames=100)
+                animflag=1
                 window.refresh()
-                
+            if (animflag!=1):
+                continue   
             window['-IMAGE-'].update(visible=not window['-IMAGE-'].visible)
 
         if (flag == 0):
